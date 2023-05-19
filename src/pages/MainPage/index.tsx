@@ -1,5 +1,6 @@
+import { Layout } from 'components';
 import { ReturnComponentType } from 'types/ReturnComponentType';
 
 export const MainPage = (): ReturnComponentType => {
-  return <></>;
+  return <Layout>kjlhl</Layout>;
 };
