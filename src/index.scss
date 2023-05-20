@@ -2,7 +2,7 @@
 @import '../src/styles/media.scss';
 
 :root {
-  font-family: Inter, system-ui, Arial, Poppins, Roboto, sans-serif;
+  font-family: Poppins, Roboto, Arial, Helvetica, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -50,12 +50,13 @@ ol {
 }
 
 body {
+  font-family: Poppins;
   min-width: 320px;
   min-height: 100vh;
   line-height: 1;
-  font-size: 18px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 27px;
+  line-height: 21px;
   height: 100%;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
@@ -70,5 +71,16 @@ input:focus::placeholder {
   color: transparent !important;
 }
 
+@include m-media(sm) {
+  .body {
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
 
-
+@include m-media(xxxl) {
+  .input {
+    font-size: 18px;
+    line-height: 27px;
+  }
+}
