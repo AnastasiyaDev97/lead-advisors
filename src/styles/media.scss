@@ -54,7 +54,7 @@
 
 @mixin m-media($breakpoint) {
   @if $breakpoint==xxxl {
-    @media screen and (min-width: 1949.9px) {
+    @media screen and (min-width: 1919.9px) {
       @content;
     }
   }

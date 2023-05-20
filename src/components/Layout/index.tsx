@@ -11,12 +11,12 @@ export const Layout = ({ children }: LayoutPropsType): ReturnComponentType => {
   return (
     <Fragment>
       <div className={style.layoutContainer}>
-        <div className={style.contentContainer}>
-          <Header />
-          <div className={style.layoutContent}>{children}</div>
-        </div>
+        <Header />
+        <main className={style.mainBlock}>
+          <div className=".container">{children}</div>
+        </main>
+        <Footer />
       </div>
-      <Footer />
     </Fragment>
   );
 };

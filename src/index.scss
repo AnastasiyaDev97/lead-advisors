@@ -1,4 +1,5 @@
 @import '../src/styles/variables.scss';
+@import '../src/styles/media.scss';
 
 :root {
   font-family: Inter, system-ui, Arial, Poppins, Roboto, sans-serif;
@@ -20,72 +21,71 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
 }
 
 a {
-  font-weight: 500;
-  color: #000000;
-  text-decoration: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
-a:hover {
-  color: #535bf2;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: inherit;
+  font-size: inherit;
+}
+
+img {
+  vertical-align: top;
 }
 
 ul,
 ol {
   list-style: none;
-  padding: 0;
-  margin: 0;
 }
 
 body {
-  margin: 0;
-  place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  line-height: 1;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
   height: 100%;
   text-rendering: optimizeSpeed;
   -webkit-font-smoothing: antialiased;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
-}
-
 input:focus::placeholder {
   color: transparent !important;
+}
+
+.container {
+  width: 100%;
+  max-width: 340px;
+  padding: 0 12px;
+  margin: 0 auto;
+  position: relative;
+  height: 100%;
+}
+
+@include m-media(sm) {
+  .container {
+    max-width: 443px;
+  }
+}
+@include m-media(xxxl) {
+  .container {
+    max-width: 862px;
+  }
 }
