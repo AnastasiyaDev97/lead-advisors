@@ -1,0 +1,29 @@
+@import '../../styles/media.scss';
+@import '../../styles/variables.scss';
+
+.footerBlock {
+  min-height: 141px;
+  height: 141px;
+  background-color: $secondaryBgColor;
+}
+
+.footerInner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@include m-media(sm) {
+  .footerBlock {
+    min-height: 160px;
+    height: 160px;
+  }
+}
+
+@include m-media(xxxl) {
+  .footerBlock {
+    min-height: 192px;
+    height: 192px;
+  }
+}

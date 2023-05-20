@@ -1,8 +1,13 @@
 @import '../../styles/media.scss';
 
+.headerBlock {
+  min-height: 142px;
+  height: 142px;
+}
+
 .logoContainer {
   width: 100%;
-  min-height: 142px;
+  height: 100%;
   text-align: center;
   padding-top: 80px;
 }
@@ -13,8 +18,11 @@
 }
 
 @include m-media(sm) {
+  .headerBlock {
+    min-height: 231px;
+    height: 231px;
+  }
   .logoContainer {
-    min-height: 768px;
     padding-top: 62px;
   }
   .logoIcon {
@@ -24,8 +32,11 @@
 }
 
 @include m-media(xxxl) {
-  .logoContainer {
+  .headerBlock {
     min-height: 161px;
+    height: 161px;
+  }
+  .logoContainer {
     padding-top: 60px;
   }
 }

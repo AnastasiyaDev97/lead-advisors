@@ -70,22 +70,5 @@ input:focus::placeholder {
   color: transparent !important;
 }
 
-.container {
-  width: 100%;
-  max-width: 340px;
-  padding: 0 12px;
-  margin: 0 auto;
-  position: relative;
-  height: 100%;
-}
 
-@include m-media(sm) {
-  .container {
-    max-width: 443px;
-  }
-}
-@include m-media(xxxl) {
-  .container {
-    max-width: 862px;
-  }
-}
+
