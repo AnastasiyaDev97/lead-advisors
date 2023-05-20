@@ -1,0 +1,31 @@
+@import '../../styles/media.scss';
+
+.logoContainer {
+  width: 100%;
+  min-height: 142px;
+  text-align: center;
+  padding-top: 80px;
+}
+.logoIcon {
+  width: 128px;
+  height: 40px;
+  object-fit: contain;
+}
+
+@include m-media(sm) {
+  .logoContainer {
+    min-height: 768px;
+    padding-top: 62px;
+  }
+  .logoIcon {
+    width: 190px;
+    height: 60px;
+  }
+}
+
+@include m-media(xxxl) {
+  .logoContainer {
+    min-height: 161px;
+    padding-top: 60px;
+  }
+}
