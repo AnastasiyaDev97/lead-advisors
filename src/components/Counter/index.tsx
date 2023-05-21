@@ -3,6 +3,7 @@ import { memo } from 'react';
 import style from './Counter.module.scss';
 
 import { Badge } from 'components';
+import useCountDown from 'hooks/useCountDown';
 import { ReturnComponentType } from 'types';
 
 type CounterItemPropsType = {
@@ -11,6 +12,8 @@ type CounterItemPropsType = {
 };
 
 export const Counter = memo((): ReturnComponentType => {
+  const value = useCountDown();
+
   return (
     <div className={style.wrapper}>
       <CounterItem time={66} unit="dd" />
