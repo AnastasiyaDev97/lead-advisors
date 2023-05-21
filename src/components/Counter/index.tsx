@@ -2,24 +2,35 @@ import { memo } from 'react';
 
 import style from './Counter.module.scss';
 
+import { DATE_UNITS } from 'assets/constants/date';
 import { Badge } from 'components';
 import useCountDown from 'hooks/useCountDown';
+import useWindowDimensions from 'hooks/useDimension';
 import { ReturnComponentType } from 'types';
+import { twoDigitNumberConverter } from 'utils/numbers';
 
 type CounterItemPropsType = {
-  time: number;
+  time: string;
   unit: string;
 };
 
 export const Counter = memo((): ReturnComponentType => {
-  const value = useCountDown();
+  const values = useCountDown();
+  const { isDesktopXL } = useWindowDimensions();
 
   return (
     <div className={style.wrapper}>
-      <CounterItem time={66} unit="dd" />
-      <CounterItem time={66} unit="dd" />
-      <CounterItem time={66} unit="dd" />
-      <CounterItem time={66} unit="dd" />
+      {Object.entries(values)?.map(value => {
+        const unit = isDesktopXL ? DATE_UNITS[value[0]] : value[0];
+
+        return (
+          <CounterItem
+            key={value[0]}
+            time={twoDigitNumberConverter(value[1])}
+            unit={unit}
+          />
+        );
+      })}
     </div>
   );
 });

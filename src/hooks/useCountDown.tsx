@@ -7,11 +7,11 @@ import { clearState, loadState, saveState } from 'utils/localStorage';
 
 dayjs.extend(duration);
 
-type FormattedTimer = {
+export type FormattedTimer = {
   days: number;
   hours: number;
-  min: number;
-  sec: number;
+  minutes: number;
+  seconds: number;
 };
 
 const useCountDown = (): FormattedTimer => {
@@ -31,14 +31,14 @@ const useCountDown = (): FormattedTimer => {
         if (remaining >= 0) {
           const days = dayjs.duration(remaining).days();
           const hours = dayjs.duration(remaining).hours();
-          const min = dayjs.duration(remaining).minutes();
-          const sec = dayjs.duration(remaining).seconds();
+          const minutes = dayjs.duration(remaining).minutes();
+          const seconds = dayjs.duration(remaining).seconds();
 
-          setTimerValue({ days, hours, min, sec });
+          setTimerValue({ days, hours, minutes, seconds });
         } else {
           clearInterval(id);
 
-          setTimerValue({ days: 0, hours: 0, min: 0, sec: 0 });
+          setTimerValue({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
           clearState('endTime');
         }
