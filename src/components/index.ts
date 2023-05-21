@@ -5,3 +5,4 @@ export { Input } from './Input';
 export { Badge } from './Badge';
 export { Title } from './Title';
 export { Counter } from './Counter';
+export { ExternalLink } from './ExternalLink';

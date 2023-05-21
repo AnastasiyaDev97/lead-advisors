@@ -2,7 +2,9 @@ import style from './Button.module.scss';
 
 import { ButtonType, ReturnComponentType, WithChildrenType } from 'types';
 
-type ButtonPropsType = { btnclassName?: ButtonType | ButtonType[] } & WithChildrenType;
+type ButtonPropsType = {
+  btnclassName?: ButtonType | ButtonType[];
+} & WithChildrenType;
 
 export const Button = ({
   children,
