@@ -9,5 +9,10 @@ type BadgePropsType = {
 };
 
 export const Badge = memo(({ text }: BadgePropsType): ReturnComponentType => {
-  return <div className={style.badge}>{text}</div>;
+  return (
+    <div className={style.badge}>
+      <div className={style.badgeIcon} />
+      <span className={style.text}>{text}</span>
+    </div>
+  );
 });
