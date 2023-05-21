@@ -8,3 +8,4 @@ export { Title } from './Title';
 export { Counter } from './Counter';
 export { ExternalLink } from './ExternalLink';
 export { EmailForm } from './EmailForm';
+export { Modal } from './Modal';

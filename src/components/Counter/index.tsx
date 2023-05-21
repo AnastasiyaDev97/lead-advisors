@@ -2,8 +2,8 @@ import { memo } from 'react';
 
 import style from './Counter.module.scss';
 
-import { DATE_UNITS } from 'assets/constants/date';
 import { Badge } from 'components';
+import { DATE_UNITS } from 'constants/date';
 import useCountDown from 'hooks/useCountDown';
 import useWindowDimensions from 'hooks/useDimension';
 import { ReturnComponentType } from 'types';

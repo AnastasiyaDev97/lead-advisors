@@ -33,7 +33,7 @@ export const EmailForm = memo((): ReturnComponentType => {
   return (
     <form onSubmit={formik.handleSubmit}>
       <Input
-        label="text"
+        label="email"
         formikProps={formik.getFieldProps('email')}
         validationErr={(formik.touched.email && formik.errors.email) || ''}
       >
