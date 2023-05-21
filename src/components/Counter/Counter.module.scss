@@ -3,19 +3,18 @@
 
 .wrapper {
   margin-top: 40px;
-  max-width: 310px;
   display: flex;
   color: $secondaryBgColor;
   font-weight: 600;
   font-size: 36px;
   line-height: 100%;
+  justify-content: center;
 }
 
 .counterItemWrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 64px;
 
   &:not(:last-child) {
     margin-right: 18px;
@@ -37,6 +36,8 @@
     margin-top: 32px;
     min-width: 588px;
     min-height: 129px;
+    font-weight: 700;
+    font-size: 72px;
   }
   .counterItemWrapper {
     &:not(:last-child) {

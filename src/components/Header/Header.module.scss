@@ -1,8 +1,8 @@
 @import '../../styles/media.scss';
 
 .headerBlock {
-  min-height: 142px;
-  height: 142px;
+  min-height: 70px;
+  margin-bottom: 20px;
 }
 
 .logoContainer {
@@ -19,8 +19,7 @@
 
 @include m-media(sm) {
   .headerBlock {
-    min-height: 231px;
-    height: 231px;
+    min-height: 160px;
   }
   .logoContainer {
     padding-top: 62px;
@@ -33,8 +32,7 @@
 
 @include m-media(xxxl) {
   .headerBlock {
-    min-height: 161px;
-    height: 161px;
+    min-height: 131px;
   }
   .logoContainer {
     padding-top: 60px;

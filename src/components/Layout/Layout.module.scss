@@ -1,7 +1,7 @@
 @import '../../styles/media.scss';
 
 .layoutContainer {
-  min-height: 100vh;
+  height: 100vh;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -34,7 +34,7 @@
 
 .mainBlock {
   flex: 1 1 auto;
-  margin-top: 44px;
+  min-height: 410px;
 }
 
 @include m-media(sm) {
@@ -52,7 +52,7 @@
     }
   }
   .mainBlock {
-    margin-top: 95px;
+    min-height: 386px;
   }
 }
 
@@ -70,6 +70,6 @@
     }
   }
   .mainBlock {
-    margin-top: 52px;
+    min-height: 489px;
   }
 }

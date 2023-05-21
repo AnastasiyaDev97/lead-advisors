@@ -2,7 +2,6 @@
 @import '../../styles/variables.scss';
 
 .badge {
-  
   min-width: 64px;
   min-height: 40px;
   position: relative;
@@ -44,5 +43,9 @@
   .text {
     font-size: 16px;
     text-transform: capitalize;
+  }
+  .badge {
+    min-width: 132px;
+    min-height: 54px;
   }
 }
