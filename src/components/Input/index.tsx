@@ -2,9 +2,11 @@ import { ChangeEvent, memo, useState } from 'react';
 
 import style from './Input.module.scss';
 
-import { ReturnComponentType } from 'types';
+import { ReturnComponentType, WithChildrenType } from 'types';
 
-export const Input = memo((): ReturnComponentType => {
+type InputPropsType = WithChildrenType;
+
+export const Input = memo(({ children }: InputPropsType): ReturnComponentType => {
   const [value, setValue] = useState('');
 
   const onChangeValue = (e: ChangeEvent<HTMLInputElement>): void => {
@@ -20,6 +22,7 @@ export const Input = memo((): ReturnComponentType => {
         value={value}
         onChange={onChangeValue}
       />
+      {children && <div className={style.inputButton}>{children}</div>}
     </div>
   );
 });
