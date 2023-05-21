@@ -1,11 +1,13 @@
-import { Badge, Layout } from 'components';
+import { Layout, Title } from 'components';
 import { ReturnComponentType } from 'types/ReturnComponentType';
 
 export const MainPage = (): ReturnComponentType => {
   return (
-    <>
-      <Layout>kjlhl rdgtrtretr ret retre retert</Layout>;
-      <Badge text="hjghgkj" />
-    </>
+    <Layout>
+      <Title
+        title="Under Construction"
+        subtitle="We're making lots of improvements and will be back soon"
+      />
+    </Layout>
   );
 };

@@ -1,0 +1,43 @@
+@import '../../styles/media.scss';
+@import '../../styles/variables.scss';
+
+.titleWrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.title {
+  color: $titleTextColor;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 104%;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  text-align: center;
+  margin-top: 16px;
+  max-width: 286px;
+}
+
+@include m-media(sm) {
+  .subtitle {
+    margin-top: 20px;
+  }
+}
+
+@include m-media(xxxl) {
+  .title {
+    font-size: 72px;
+  }
+  .subtitle {
+    font-size: 18px;
+    margin-top: 8px;
+    max-width: 423px;
+  }
+}

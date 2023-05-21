@@ -34,6 +34,7 @@
 
 .mainBlock {
   flex: 1 1 auto;
+  margin-top: 44px;
 }
 
 @include m-media(sm) {
@@ -50,6 +51,9 @@
       top: -10px;
     }
   }
+  .mainBlock {
+    margin-top: 95px;
+  }
 }
 
 @include m-media(xxxl) {
@@ -64,5 +68,8 @@
       height: 425px;
       left: 0;
     }
+  }
+  .mainBlock {
+    margin-top: 52px;
   }
 }
