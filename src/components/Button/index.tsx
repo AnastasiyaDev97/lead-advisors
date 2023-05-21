@@ -28,5 +28,9 @@ export const Button = ({
     return finalClassName;
   };
 
-  return <button className={buttonClassNames()}>{children}</button>;
+  return (
+    <button type="submit" className={buttonClassNames()}>
+      {children}
+    </button>
+  );
 };

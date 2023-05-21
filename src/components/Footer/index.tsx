@@ -1,7 +1,6 @@
 import style from './Footer.module.scss';
 
-import { Input } from 'components';
-import { Button } from 'components/Button';
+import { EmailForm } from 'components';
 import commonStyles from 'styles/Container.module.scss';
 import { ReturnComponentType } from 'types';
 
@@ -10,9 +9,7 @@ export const Footer = (): ReturnComponentType => {
     <footer className={style.footerBlock}>
       <div className={commonStyles.container}>
         <div className={style.footerInner}>
-          <Input>
-            <Button btnclassName={['navigation', 'secondary']} />
-          </Input>
+          <EmailForm />
         </div>
       </div>
     </footer>
