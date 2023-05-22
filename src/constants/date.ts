@@ -3,4 +3,4 @@ export const DATE_UNITS = {
   hours: 'HH',
   minutes: 'MM',
   seconds: 'SS',
-};
+} as { [name: string]: string };
