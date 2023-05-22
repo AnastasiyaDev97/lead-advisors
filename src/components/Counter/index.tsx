@@ -21,7 +21,7 @@ export const Counter = memo((): ReturnComponentType => {
   return (
     <div className={style.wrapper}>
       {Object.entries(values)?.map(value => {
-        const unit = isDesktopXL ? DATE_UNITS[value[0]] : value[0];
+        const unit = /* isDesktopXL ? DATE_UNITS[value[0]] : */ value[0];
 
         return (
           <CounterItem
