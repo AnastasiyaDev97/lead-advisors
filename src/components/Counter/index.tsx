@@ -3,9 +3,9 @@ import { memo } from 'react';
 import style from './Counter.module.scss';
 
 import { Badge } from 'components';
-import { DATE_UNITS } from 'constants/date';
+/* import { DATE_UNITS } from 'constants/date'; */
 import useCountDown from 'hooks/useCountDown';
-import useWindowDimensions from 'hooks/useDimension';
+/* import useWindowDimensions from 'hooks/useDimension'; */
 import { ReturnComponentType } from 'types';
 import { twoDigitNumberConverter } from 'utils/numbers';
 
@@ -16,7 +16,7 @@ type CounterItemPropsType = {
 
 export const Counter = memo((): ReturnComponentType => {
   const values = useCountDown();
-  const { isDesktopXL } = useWindowDimensions();
+  /*  const { isDesktopXL } = useWindowDimensions(); */
 
   return (
     <div className={style.wrapper}>
