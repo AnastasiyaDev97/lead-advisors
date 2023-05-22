@@ -1,10 +1,14 @@
 import style from './MainPage.module.scss';
 
+import { sendMessage } from 'api';
 import { Counter, ExternalLink, Layout, Modal, Title } from 'components';
 import { Button } from 'components/Button';
 import { ReturnComponentType } from 'types/ReturnComponentType';
-
 export const MainPage = (): ReturnComponentType => {
+  const onClick = (): void => {
+    sendMessage({ name: 'jjj', email: 'hjkhk', text: 'hjhjjjj' });
+  };
+
   return (
     <>
       <Layout>
@@ -18,6 +22,7 @@ export const MainPage = (): ReturnComponentType => {
           <ExternalLink href="https://www.britannica.com/animal/cat">
             <Button btnclassName={['navigation', 'primary']}>Go to the event</Button>
           </ExternalLink>
+          <div onClick={onClick}>hhhhhhhhhhhhhhhh</div>
         </div>
       </Layout>
       <Modal
