@@ -4,7 +4,7 @@ import tsconfigPaths from 'vite-tsconfig-paths';
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/lead-advisors/',
+  base: 'https://AnastasiyaDev97.github.io/lead-advisors',
   plugins: [react(), tsconfigPaths()],
   server: { port: 3000 },
 });
